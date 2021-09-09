@@ -1,0 +1,76 @@
+
+.product_container {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.item {
+    padding: 10px;
+    box-shadow: 5px 10px 15px grey;
+    border-radius: 10px;
+    margin: 10px 20px;
+    position: relative;
+    
+}
+
+._img {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+}
+._img,.overlay:hover {
+    opacity: 1;
+}
+
+.addtoCart {
+
+    padding: 10px;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    border: 2px solid rebeccapurple;
+    border-radius: 5px;
+}
+
+.addtoCart:hover {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+   
+}
+
+.price {
+    font-weight: bold;
+}
+
+.no_product {
+    text-align: center;
+    width: 100%;
+    align-items: center;
+}
+
+.overlay {
+    opacity: 0;
+    top: 50%;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: red;
+    border-radius: 50%;
+   
+}
+.overlay button {
+    color: red;
+    width: 80px;
+    height: 80px;
+    padding:10px ;
+    border: 2px solid white;
+    border-radius: 50%;
+   
+}

@@ -1,0 +1,47 @@
+
+.submit_button {
+   
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+.submit_button:hover {
+    background-color: blue;
+    color: white;
+    border: 1px solid white;
+
+}
+.input_container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+ input, textarea {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+
+.formcontroll {
+    width: 100%;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    display: block;
+}
+.formcontroll input {
+    width: 300px;
+}
+
+.formcontroll textarea {
+    width: 300px;
+}
+
+.formcontroll input:focus,
+.formcontroll textarea:focus
+{
+    outline-color:blue;
+}

@@ -1,0 +1,37 @@
+<%- include('../includes/head.ejs')%>
+    <link rel="stylesheet" href="/css/shop.css">
+</head>
+<body>
+    <%- include('../includes/navigation.ejs')%>
+
+    <main>
+        <h1>My Products</h1>
+        <div class="product_container">
+        <% if(product.length>0) {%>
+            <% product.map(el=>{ %>
+               
+              
+                    <div class="item">
+                        <p class="product_detail"><%= el.title %></p> 
+                        <img src="<%= el.imageurl %>" alt="Surya" class="_img">
+                        <p class="price"><%= el.price %>$</p>
+                        <p class="price"><%= el.description %></p>
+
+                        <button class="addtoCart">Add to Cart</button>
+                        <div class="overlay">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                   
+               
+           <% }) %>
+       
+    <% } else { %>
+        <div class="no_product">
+            <h3>No Product</h3>
+        </div>
+        
+    <%  }%>
+</div>
+    </main>
+<%- include('../includes/end.ejs')%>
