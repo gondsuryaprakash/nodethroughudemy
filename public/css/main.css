@@ -44,3 +44,102 @@ main {
 .active { 
     background-color: black;
 }
+
+.prouct_detail_Container {
+ 
+    position: relative;
+}
+
+.title {
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.detail_image {
+    width: 800px;
+    height: 500px;
+    margin-top: 40px;
+}
+
+.details_desc {
+    margin-top: 20px;
+}
+
+.details_price {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.addtoCart {
+
+    padding: 5px 10px;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    border: 2px solid rebeccapurple;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+
+.addtoCart:hover {
+    background-color: white;
+    color: red !important;
+    border: 2px solid red;
+   
+}
+
+.cartContainer {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    
+
+}
+.cartItem {
+    width: 100%;
+    display: inline-block;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.cartItem div {
+    padding: 10px;
+}
+.cartItem img {
+    width: 400px;
+    height: 200px;
+}
+
+.addoption button {
+    padding: 10px;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 10px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.addoption button:hover {
+    background-color: white;
+    columns: red;
+    
+}
+
+.priceandQuantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.priceandQuantity h2 {
+    margin: 0px 23px;
+
+}

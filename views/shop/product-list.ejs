@@ -15,11 +15,18 @@
                         <p class="product_detail"><%= el.title %></p> 
                         <img src="<%= el.imageurl %>" alt="Surya" class="_img">
                         <p class="price"><%= el.price %>$</p>
-                        <p class="price"><%= el.description %></p>
 
-                        <button class="addtoCart">Add to Cart</button>
-                        <div class="overlay">
-                            <button>Add to Cart</button>
+                        <p class="price"><%= el.description %></p>
+                        <div class="overlay" id='overlay'>
+                            <form action="/add-cart" method="POST">
+                                <input type="hidden" name="productId" value="<%=el.id%>">
+                                <button>Add to Cart</button>
+                            </form>
+                           
+                        </div>
+
+                        <div class="details">
+                            <a class="addtoCart" href="/product/<%=el.id%>">Details</a>
                         </div>
                     </div>
                    

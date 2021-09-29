@@ -16,8 +16,14 @@
                         <img src="<%= el.imageurl %>" alt="Surya" class="_img">
                         <p class="price"><%= el.price %>$</p>
                         <p class="price"><%= el.description %></p>
-                        <button class="addtoCart">Delete</button>
-                        <button class="addtoCart">Edit</button>
+                        <form action="/admin/delete/<%= el.id %>" method="POST">
+                            <button class="addtoCart">Delete</button>
+                        </form>
+                      
+                        <form  action='/admin/edit-product/<%= el.id %>/?edit=true' method="GET">
+                            <button class="addtoCart">Edit</button>
+                        </form>
+                      
                     </div>
                    
                

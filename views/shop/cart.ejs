@@ -1,2 +1,48 @@
 <%- include('../includes/head.ejs')%>
-<%- include('../includes/navigation') %>
+   
+</head>
+<body>
+    <%- include('../includes/navigation.ejs')%>
+
+    <main>
+       <div class="prouct_detail_Container">
+
+        <% cartItem.map(el => { %>
+
+          <div class="cartContainer">
+            <div class="cartItem">
+              <div class="itemDescrption">
+                <h2><%= el.productInCart.title %></h2>
+                <img src="<%= el.productInCart.imageurl %>" alt="<%= el.productInCart.title %>">
+                <div class="priceandQuantity">
+                  <h2>Quantity : <%=el.qty%></h2>
+                  <h2>Total Price : <%=el.qty*el.productInCart.price%></h2>
+                </div>
+               
+              </div>
+              <div class="addoption">
+                <form action="/add-cart" method="POST">
+                  <input type="hidden" name="productId" value="<%=el.productInCart.id%>">
+                 <button>+</button>
+                </form>
+              
+               <form action="/delete-cart" method="POST">
+                <input type="hidden" name="id" value="<%=el.productInCart.id%>">
+                <input type="hidden" name="productprice" value="<%=el.productInCart.price%>">
+               <button>-</button>
+              </form>
+              </div>
+  
+            </div>
+      
+          </div>
+
+         
+        <%})%>
+         
+         <li></li>
+
+          
+       </div>
+    </main>
+<%- include('../includes/end.ejs')%>

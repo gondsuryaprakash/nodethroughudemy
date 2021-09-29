@@ -6,6 +6,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 10px;
+    justify-content: center;
 }
 
 .item {
@@ -22,27 +23,32 @@
     height: 300px;
     opacity: 1;
 }
-._img,.overlay:hover {
+._img:hover {
+    opacity: 0.7;
+}
+._img:hover ~ #overlay {
     opacity: 1;
 }
 
 .addtoCart {
 
-    padding: 10px;
+    padding: 5px 10px;
     color: white;
     background-color: red;
     font-weight: bold;
     border: 2px solid rebeccapurple;
     border-radius: 5px;
+    width: 200px;
 }
+
 
 .addtoCart:hover {
     background-color: white;
-    color: red;
+    color: red !important;
     border: 2px solid red;
    
 }
-
+    
 .price {
     font-weight: bold;
 }
@@ -63,6 +69,9 @@
     background-color: white;
     color: red;
     border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 900;
    
 }
 .overlay button {
@@ -74,3 +83,14 @@
     border-radius: 50%;
    
 }
+
+.overlay:hover {
+    opacity: 1;
+  
+}
+.details {
+ 
+    margin-top: 10px;
+   
+
+ }

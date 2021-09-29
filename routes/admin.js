@@ -6,11 +6,14 @@ const router = express.Router();
 
 
 
-const { getAddProduct, postAddProduct, getProducts } = productController
+const { getAddProduct, postAddProduct, getProducts, getEditProduct, postEditProduct, postProductDelete} = productController
 
 
 router.get('/add-product', getAddProduct)
 router.get('/products',getProducts);
 router.post('/add-product',postAddProduct)
+router.get('/edit-product/:prdoId',getEditProduct)
+router.post('/edit-product',postEditProduct)
+router.post('/delete/:prodId', postProductDelete)
 
 module.exports= router

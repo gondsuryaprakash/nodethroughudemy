@@ -17,7 +17,7 @@
                         <p class="price"><%= el.price %>$</p>
                         <p class="price"><%= el.description %></p>
 
-                        <button class="addtoCart">Add to Cart</button>
+                        <%- include('../includes/add-to-cart.ejs', {el})%>
                     </div>
                    
                
